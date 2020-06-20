@@ -1106,7 +1106,7 @@ $ git log --abbrev-commit --pretty=oneline
 
 经典的Git工作流程是通过操纵下面这三个区域来以更加连续的状态记录项目快照的。
 
-![image-20200613174548865](assets/image-20200613174548865.png)
+![image-20200613174548865](https://cdn.jsdelivr.net/gh/Square-John/Image/img/image-20200613182157005.png)
 
 1. `git add`命令会将文件复制到`Index`中
 2. `git commit`会取得`Index`中的内容并将其保存为一个永久的快照，然后创建一个指向该快照的**提交对象**，然后更新`master`来指向本次提交
@@ -1146,7 +1146,7 @@ $ git log --abbrev-commit --pretty=oneline
 
 	- 如图所示
 
-		![image-20200613182157005](assets/image-20200613182157005.png)
+		![image-20200613182157005](https://cdn.jsdelivr.net/gh/Square-John/Image/img/image-20200613174548865.png)
 
 ##### 带路径
 
@@ -1158,5 +1158,5 @@ $ git checkout -- <filename>
 
 
 
-### end
+### END
 

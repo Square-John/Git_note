@@ -26,13 +26,13 @@ Git在进行提交操作的时候，会保存一个提交对象，该提交对�
 
 4. 最终可用下图表示初次提交后各个对象之间的关系
 
-	![image-20200527110126266](assets/image-20200527110126266.png)
+	![image-20200527110126266](https://cdn.jsdelivr.net/gh/Square-John/Image/img/image-20200527111955045.png)
 
 	
 
 5. 稍作修改之后再次提交,那么这次的提交对象就会包含一个指向上一次的提交对象（父对象）的指针，如下图所示
 
-	![image-20200527110152320](assets/image-20200527110152320.png)
+	![image-20200527110152320](https://cdn.jsdelivr.net/gh/Square-John/Image/img/image-20200527110126266.png)
 
 #### 分支的实质
 
@@ -58,11 +58,11 @@ Git在进行提交操作的时候，会保存一个提交对象，该提交对�
 
 	这个命令就新建了一个`testing`的指针指向当前的提交对象（也就是最新的提交对象）。如下图所示
 
-	![image-20200527111955045](assets/image-20200527111955045.png)
+	![image-20200527111955045](https://cdn.jsdelivr.net/gh/Square-John/Image/img/image-20200527110152320.png)
 
 6. 那么Git是如何知道当前在哪一个分支上呢？实际上在Git中还有一个名为`HEAD`的特殊指针，该指针指向当前所在的本地分支，如下图所示
 
-	<img src="assets/image-20200527112259747.png" alt="image-20200527112259747" style="zoom:50%;" />
+	<img src="https://cdn.jsdelivr.net/gh/Square-John/Image/img/image-20200527112259747.png" alt="image-20200527112259747" style="zoom:50%;" />
 
 7. **使用`git branch <branchName>`命令只是新建了一个分支，但是并不会自动切换到新建的分支中去**。也就是`HEAD`指针不会自动指向该新建的指针。
 
@@ -82,13 +82,13 @@ Git在进行提交操作的时候，会保存一个提交对象，该提交对�
 
 	- 根据上面的讲述，我们应该知道了分支的切换，实际上就是`HEAD`指针改变了它所指向的对象。这里在执行该指令之后，`HEAD`就指向了`testing`。如下图所示
 
-		<img src="assets/image-20200527143912380.png" alt="image-20200527143912380" style="zoom:50%;" />
+		<img src="https://cdn.jsdelivr.net/gh/Square-John/Image/img/image-20200527143912380.png" alt="image-20200527143912380" style="zoom:50%;" />
 
 	
 
 3. 然后我们在`testing`分支上做一些修改然后再提交
 
-	<img src="assets/image-20200527144037668.png" alt="image-20200527144037668" style="zoom:50%;" />
+	<img src="https://cdn.jsdelivr.net/gh/Square-John/Image/img/image-20200527144947687.png" alt="image-20200527144037668" style="zoom:50%;" />
 
 	- 如图所示，`testing`分支向前移动了，但是`master`分支却没有，依然停留在原地。
 
@@ -100,7 +100,7 @@ Git在进行提交操作的时候，会保存一个提交对象，该提交对�
 
 	- 此时，`HEAD`就会指向`master`。如下图所示
 
-		<img src="assets/image-20200527144947687.png" alt="image-20200527144947687" style="zoom:50%;" />
+		<img src="https://cdn.jsdelivr.net/gh/Square-John/Image/img/image-20200527144037668.png" alt="image-20200527144947687" style="zoom:50%;" />
 
 	- 这一条命令做了两件事：
 
@@ -113,7 +113,7 @@ Git在进行提交操作的时候，会保存一个提交对象，该提交对�
 
 6. 随后，我们又在`master`分支上进行了修改和提交，这时候，项目的提交历史就会产生分叉，如下图所示
 
-	<img src="assets/image-20200527150018922.png" alt="image-20200527150018922" style="zoom:67%;" />
+	<img src="https://cdn.jsdelivr.net/gh/Square-John/Image/img/image-20200527150018922.png" alt="image-20200527150018922" style="zoom:67%;" />
 
 7. 我们可以不断地在分支之间进行切换和工作，这些分支之间的提交互不干扰，因此在它们上进行的工作也互不干扰。在实际成熟之后，我们还可以把它们合并起来。
 
@@ -133,7 +133,7 @@ Git在进行提交操作的时候，会保存一个提交对象，该提交对�
 
 1. 首先我们在`master`分支上已经进行了一些工作，产生了一些提交，如下图
 
-	<img src="assets/image-20200527151729990.png" alt="image-20200527151729990" style="zoom:50%;" />
+	<img src="https://cdn.jsdelivr.net/gh/Square-John/Image/img/image-20200527151729990.png" alt="image-20200527151729990" style="zoom:50%;" />
 
 2. 然后可能想开发一个新功能，我们新建一个分支`iss53`来进行这个开发工作
 
@@ -143,11 +143,11 @@ Git在进行提交操作的时候，会保存一个提交对象，该提交对�
 
 	- 结果如图
 
-		<img src="assets/image-20200527151910011.png" alt="image-20200527151910011" style="zoom:50%;" />
+		<img src="https://cdn.jsdelivr.net/gh/Square-John/Image/img/image-20200527151910011.png" alt="image-20200527151910011" style="zoom:50%;" />
 
 3. 然后我们在`iss53`分支上进行了一些工作并进行了一次提交，就变成如下这样
 
-	<img src="assets/image-20200527152025027.png" alt="image-20200527152025027" style="zoom:50%;" />
+	<img src="https://cdn.jsdelivr.net/gh/Square-John/Image/img/image-20200527152025027.png" alt="image-20200527152025027" style="zoom:50%;" />
 
 4. 这时候我们发现`master`上存在bug，那么这个时候，分支的优势就体现出来了，因为我们如果想修复bug，只需要将分支切换回`master`就可以将工作区中的内容恢复到当时的版本了，而不是需要将`iss53`分支上的修改撤销。
 
@@ -166,7 +166,7 @@ Git在进行提交操作的时候，会保存一个提交对象，该提交对�
 
 	- 随后在其上进行了一些工作，进行了一次提交，就变成下面这样
 
-		<img src="assets/image-20200527152853839.png" alt="image-20200527152853839" style="zoom:50%;" />
+		<img src="https://cdn.jsdelivr.net/gh/Square-John/Image/img/image-20200527154229252.png" alt="image-20200527152853839" style="zoom:50%;" />
 
 #### 分支的快进合并
 
@@ -203,7 +203,7 @@ Git在进行提交操作的时候，会保存一个提交对象，该提交对�
 
 	- ==快进==合并之后的结果如图所示
 
-		<img src="assets/image-20200527154229252.png" alt="image-20200527154229252" style="zoom:50%;" />
+		<img src="https://cdn.jsdelivr.net/gh/Square-John/Image/img/image-20200527154708589.png" alt="image-20200527154229252" style="zoom:50%;" />
 
 3. 在完成了合并之后，我们就可以删除其中的某一个分支，例如本例中，要把`hotfix`分支删除，那么我们就可以通过`git branch -d <branchName>`命令进行删除操作。本例为
 
@@ -213,11 +213,11 @@ Git在进行提交操作的时候，会保存一个提交对象，该提交对�
 
 	- 此时，分支的情况就变成了下图这样
 
-		<img src="assets/image-20200527154708589.png" alt="image-20200527154708589" style="zoom:80%;" />
+		<img src="https://cdn.jsdelivr.net/gh/Square-John/Image/img/image-20200527154848656.png" alt="image-20200527154708589" style="zoom:80%;" />
 
 4. 然后我们又切换回到`iss53`分支上继续进行开发，如下图所示
 
-	<img src="assets/image-20200527154848656.png" alt="image-20200527154848656" style="zoom:67%;" />
+	<img src="https://cdn.jsdelivr.net/gh/Square-John/Image/img/image-20200527152853839.png" alt="image-20200527154848656" style="zoom:67%;" />
 
 5. 这里需要注意的是，我们在`hotfix`分支上所做的修改并没有包含在`iss53`分支上。如果我们需要其中的修改数据，我们可以使用`git merge master`命令将`master`分支合并到`iss53`分支上。另外我们也可以等`iss53`分支的开发任务完成之后再把它合并回到`master`分支上。
 
@@ -261,11 +261,11 @@ Git在进行提交操作的时候，会保存一个提交对象，该提交对�
 
 	- 出现这样的情况的时候，Git会使用两个分支的末端所指的快照（==C4==和==C5==）以及两个分支的共同祖先（==C2==）来做一个==三方合并==。如下图所示
 
-		<img src="assets/image-20200527173114246.png" alt="image-20200527173114246" style="zoom:80%;" />
+		<img src="https://cdn.jsdelivr.net/gh/Square-John/Image/img/image-20200527173114246.png" alt="image-20200527173114246" style="zoom:80%;" />
 
 	- 和之前的快进合并不同的是，Git将这次的三方合并的结果做了一次新的快照，并自动创建一个新的提交对象指向这个新的快照。这个提交被称作==一个合并提交==，其特别之处在于，这样的提交对象有着不止一个父提交，如下图所示
 
-		![image-20200527173204349](assets/image-20200527173204349.png)
+		![image-20200527173204349](https://cdn.jsdelivr.net/gh/Square-John/Image/img/image-20200527173204349.png)
 
 	- 从图中可以看到`C6`有着两个父提交，分别是`C4`和`C5`
 
@@ -377,11 +377,11 @@ Git在进行提交操作的时候，会保存一个提交对象，该提交对�
 
 长期分支的工作方式大概可以描述为：用一个分支保留最稳定的代码，然后使用另外的分支将工作向前推进，工作进行到一定的阶段，代码变得稳定之后就并入稳定的分支，然后再转换到其他分支上继续推进工作，如此反复。这就相当于用一个分支用作版本发布，不在其上面工作，使用另外的分支推进工作。它的方式相当于下图
 
-![image-20200527211334747](assets/image-20200527211334747.png)
+![image-20200527211334747](https://cdn.jsdelivr.net/gh/Square-John/Image/img/image-20200527211334747.png)
 
 - 这类似于流水线工作
 
-	![image-20200527211431973](assets/image-20200527211431973.png)
+	![image-20200527211431973](https://cdn.jsdelivr.net/gh/Square-John/Image/img/image-20200528091250777.png)
 
 - 这就相当于多个分支在一线上跑，前面的是测试版，后面的是稳定版，前面的测试稳定了就将稳定版分支指针移到向前移动到当前位置，然后发布新的稳定版，然后测试版又向前推进。
 
@@ -436,7 +436,7 @@ Git在进行提交操作的时候，会保存一个提交对象，该提交对�
 
 	- 我们在对一个仓库进行克隆的时候，Git的`clone`命令会自动为我们创建一个表示该远程库的简写名`origin`，然后拉取它的所有数据，然后自动创建一个指向远程库`master`分支的指针`origin/master`，这就是一个远程跟踪分支。同时，Git还会为我们克隆的本地库创建一个本地分支`master`，它和`origin/master`指针指向相同的地方。`master`分支由我们自己控制，就是一个普通的本地分支，`origin/master`由Git自动控制，只有连接到相应的远程库并且远程库上的`master`分支移动了，该指针才会移动，并且会自动移动到和远程库的`master`分支当前所在位置一致的地方。
 
-		<img src="assets/image-20200528091250777.png" alt="image-20200528091250777" style="zoom:80%;" />
+		<img src="https://cdn.jsdelivr.net/gh/Square-John/Image/img/image-20200527211431973.png" alt="image-20200528091250777" style="zoom:80%;" />
 
 		- `origin`这一个名称和`master`一样，没有什么特殊的含义，只是因为`clone`命令会默认生成这样的一个名称。
 
@@ -589,11 +589,11 @@ Git在进行提交操作的时候，会保存一个提交对象，该提交对�
 
 1. 回顾前面的**分支的合并**的方式，对于如下的两个分支
 
-	<img src="assets/image-20200528203202339.png" alt="image-20200528203202339" style="zoom:50%;" />
+	<img src="https://cdn.jsdelivr.net/gh/Square-John/Image/img/image-20200528203202339.png" alt="image-20200528203202339" style="zoom:50%;" />
 
 2. 使用`merge`命令将两个分支合并。合并的过程可以描述为：Git会把两个分支的最新快照（==C4==和==C3==）以及二者的最近的共同祖先（==C2==）进行三方合并，并且为合并的结果形成一个新的提交，如下图
 
-	<img src="assets/image-20200528203540423.png" alt="image-20200528203540423" style="zoom:80%;" />
+	<img src="https://cdn.jsdelivr.net/gh/Square-John/Image/img/image-20200528205758154.png" alt="image-20200528203540423" style="zoom:80%;" />
 
 3. 这里介绍一种新的合并方法——**变基**：我们可以提取在==C4==中引入的修改和补丁，然后在==C3==的基础上再应用一次==C4==的修改和补丁。这样的操作再Git中就被成为**变基**。
 
@@ -614,7 +614,7 @@ Git在进行提交操作的时候，会保存一个提交对象，该提交对�
 
 	- 然后将当前分支==experiment==指向目标基底分支的最新一次的提交`C3`，最后将上面临时保存的文件中的历次修改依次应用。这就相当于在==master==分支上在其最新的提交之后依次重新提交一遍==experiment==上自与==master==最近共同祖先之后的历次修改。过程如下图所示
 
-		![image-20200528205758154](assets/image-20200528205758154.png)
+		![image-20200528205758154](https://cdn.jsdelivr.net/gh/Square-John/Image/img/image-20200528203540423.png)
 
 	- 然后，我们还需要回到==master==分支上执行一次**快进合并**
 
@@ -625,7 +625,7 @@ Git在进行提交操作的时候，会保存一个提交对象，该提交对�
 
 	- 这就有点类似于==长期分支==的流水形式。也就是将另外一个分支所做的工作搬到想要并入的分支的最前面，然后再将==master==指针向前移动。如下图所示
 
-		![image-20200528210210293](assets/image-20200528210210293.png)
+		![image-20200528210210293](https://cdn.jsdelivr.net/gh/Square-John/Image/img/image-20200528210210293.png)
 
 6. 执行变基之后，**Figure 38**中`C4'`指向的快照实际上和**Figure 36**中的`C5`指向的快照是一模一样的。这两种合并的方法的最终合并结果并没有什么差别。但是**变基**使得提交历史变得更加整洁。
 
@@ -643,7 +643,7 @@ Git在进行提交操作的时候，会保存一个提交对象，该提交对�
 
 2. 例如下面的例子，一个项目的各个分支的提交历史如下
 
-	![image-20200528213448004](assets/image-20200528213448004.png)
+	![image-20200528213448004](https://cdn.jsdelivr.net/gh/Square-John/Image/img/image-20200528213448004.png)
 
 3. 假设此时我们想要将`client`中的修改合并到`master`中并发布，但是暂时并不想合并`server`中的修改，可能这个分支的工作还没有完成。
 
@@ -665,7 +665,7 @@ Git在进行提交操作的时候，会保存一个提交对象，该提交对�
 
 	- 其结果如下图
 
-		![image-20200528214749314](assets/image-20200528214749314.png)
+		![image-20200528214749314](https://cdn.jsdelivr.net/gh/Square-John/Image/img/image-20200528214749314.png)
 
 5. 然后可以快进合并`master`分支了
 
@@ -674,7 +674,7 @@ Git在进行提交操作的时候，会保存一个提交对象，该提交对�
 	$ git merge client
 	```
 
-	![image-20200528214909946](assets/image-20200528214909946.png)
+	![image-20200528214909946](https://cdn.jsdelivr.net/gh/Square-John/Image/img/image-20200528214909946.png)
 
 6. 这上面的例子就说明了在开头说的**“对两个分支进行变基时，所生成的**==**重放**==**并不一定要在目标分支上应用，也可以应用到另外一条分支上”**这句话的含义。上面的例子实际上是`server`分支和`client`分支进行变基，但是却将变基的重放应用在了`master`分支上。
 
@@ -692,7 +692,7 @@ Git在进行提交操作的时候，会保存一个提交对象，该提交对�
 
 	该命令就省去了要先切换到`server`分支，然后提取其补丁变基到`master`分支上，这个命令执行之后，结果如下图所示
 
-	<img src="assets/image-20200529082200467.png" alt="image-20200529082200467" style="zoom:150%;" />
+	<img src="https://cdn.jsdelivr.net/gh/Square-John/Image/img/image-20200529082914058.png" alt="image-20200529082200467" style="zoom:150%;" />
 
 8. 接下来我们就可以进行快进合并了
 
@@ -703,7 +703,7 @@ Git在进行提交操作的时候，会保存一个提交对象，该提交对�
 
 9. 至此`client`和`server`分支都已经合并到了`master`分支里面。接下来我们就可以删除这两个分支了，最终的提交历史就会变成下图所示的样子
 
-	<img src="assets/image-20200529082914058.png" alt="image-20200529082914058" style="zoom:150%;" />
+	<img src="https://cdn.jsdelivr.net/gh/Square-John/Image/img/image-20200529082200467.png" alt="image-20200529082914058" style="zoom:150%;" />
 
 #### 变基的风险
 
@@ -715,27 +715,27 @@ Git在进行提交操作的时候，会保存一个提交对象，该提交对�
 
 	- 假如我们从一个服务器上克隆了一个仓库进行开发。提交历史如下图
 
-		![image-20200529083839219](assets/image-20200529083839219.png)
+		![image-20200529083839219](https://cdn.jsdelivr.net/gh/Square-John/Image/img/image-20200529083839219.png)
 
 	- 随后有某个人向服务器推送了自己的修改，这其中包括一次合并
 
-		![image-20200529084029763](assets/image-20200529084029763.png)
+		![image-20200529084029763](https://cdn.jsdelivr.net/gh/Square-John/Image/img/image-20200529084029763.png)
 
 	- 然后你把这些提交的内容拉取下来并和本地仓库进行了合并，我们本地库的提交历史就会变成下面这样
 
-		![image-20200529084150656](assets/image-20200529084150656.png)
+		![image-20200529084150656](https://cdn.jsdelivr.net/gh/Square-John/Image/img/image-20200529084150656.png)
 
 	- 接下来这个人决定把刚才的合并撤销，采用变基的方式重新合并，然后使用`git push --force`命令重新推送到服务器上覆盖了上一次合并的提交历史，这时候服务器上的历史就变成了这样
 
-		![image-20200529084418401](assets/image-20200529084418401.png)
+		![image-20200529084418401](https://cdn.jsdelivr.net/gh/Square-John/Image/img/image-20200529084418401.png)
 
 	- 然后我们又从服务器拉取更新，这时候我们发现多出来了一些新的提交
 
-		![image-20200529084612131](assets/image-20200529084612131.png)
+		![image-20200529084612131](https://cdn.jsdelivr.net/gh/Square-John/Image/img/image-20200529084612131.png)
 
 	- 这就使得我们双方的处境都变得很尬尴。如果我们执行`git pull`命令，结果就像下图这样
 
-		![image-20200529085020207](assets/image-20200529085020207.png)
+		![image-20200529085020207](https://cdn.jsdelivr.net/gh/Square-John/Image/img/image-20200529085020207.png)
 
 	- 这个时候就相当于我们又把相同的内容进行了依次合并，生成了一个新的提交。此时如果我们执行`git log`会发现，这两个提交的的作者，日期和日志都是一样的，这就会令人感到混乱
 
@@ -758,7 +758,7 @@ Git在进行提交操作的时候，会保存一个提交对象，该提交对�
 
 4. 最终就得到了==在一个被变基然后强制推送的分支上再次执行变基之后的结果==如下图所示
 
-	![image-20200529094029084](assets/image-20200529094029084.png)
+	![image-20200529094029084](https://cdn.jsdelivr.net/gh/Square-John/Image/img/image-20200529094029084.png)
 
 5. 要想上述的方案有效，前提是对方在进行变基时`C4`和`C4’`几乎是一样的。否则变基操作就无法识别它们是相同的。然后就会创建一个新的类似`C4`的补丁，而这个补丁的内容又和`C4’`发生冲突，从而无法整洁地整合入历史
 
@@ -1099,5 +1099,5 @@ Git在进行提交操作的时候，会保存一个提交对象，该提交对�
 
 	- 这个命令最终会将在本地库独有的那些提交历史应用到`<remoteRep>/<branch>`上
 
-## END
+### END
 

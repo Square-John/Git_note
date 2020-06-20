@@ -1105,7 +1105,7 @@ $ git log -L <regex>
 
 
 
-## end
+## END
 
 
 
